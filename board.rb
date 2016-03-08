@@ -40,8 +40,12 @@ class Board
 
     print to_render
   end
+
+  def in_bounds?(row, col)
+    if (row >= 0 && row < @grid.size) && (col >= 0 && col < @grid.size)
+      return true
+    else
+      return false
+    end
+  end
 end
-
-b = Board.new(9, 2)
-
-b.render_board
